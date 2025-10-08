@@ -11,7 +11,7 @@ RUN apk add --no-cache wget
 RUN npm install -g @stoplight/prism-cli
 
 # Define a build argument for the OpenAPI spec URL with a default value
-ARG OPENAPI_URL=https://petstore3.swagger.io/api/v3/openapi.json
+ARG OPENAPI_URL=https://raw.githubusercontent.com/apiglue/openapi-specs/refs/heads/main/contacts-api.json
 
 # Download the OpenAPI specification from GitHub
 RUN wget -O /app/openapi.json ${OPENAPI_URL}
